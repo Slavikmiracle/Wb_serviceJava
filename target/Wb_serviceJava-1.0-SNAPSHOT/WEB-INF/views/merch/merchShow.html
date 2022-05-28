@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Show</title>
+</head>
+<body>
+<p th:text="${merch.getName() + ', ' + merch.getValue()}">VALUE</p>
+<p th:text="${'Type: ' + merch.getTypes()}">VALUE</p>
+<p th:text="${'Institute: ' + merch.getInstitute()}">VALUE</p>
+<p th:text="${merch.getId()}">VALUE</p>
+<p>WTF?</p>
+
+<br/>
+<hr/>
+<a th:href="@{/2/{id}/edit(id=${merch.getId()})}">Edit</a>
+<br/>
+<hr/>
+<form th:method="DELETE" th:action="@{/2/{id}(id=${merch.getId()})}">
+  <input type="submit" value="Delete"/>
+</form>
+
+</body>
+</html>
