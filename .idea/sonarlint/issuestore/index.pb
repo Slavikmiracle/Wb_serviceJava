@@ -9,8 +9,6 @@ Z
 .src/main/webapp/WEB-INF/views/logIn/stich.html,9\7\9709fcfc41a3da905db7b6dd4fc08d65b65d058b
 _
 /src/main/webapp/WEB-INF/views/logIn/bunina.html,1\1\1196aece948ba01e4273f8aff1816cb4a7fcc8fd
-_
-/src/main/webapp/WEB-INF/views/merch/search.html,f\0\f0a864cb5e3fa0b64b23ee66bdb4109e3b0687af
 ^
 .src/main/webapp/WEB-INF/views/people/edit.html,6\5\65684609741f2fbbbec8a75635079c03817e4212
 X
@@ -19,13 +17,5 @@ X
 -src/main/webapp/WEB-INF/views/people/new.html,9\7\97c3b486fa9c121f92d9aff1f5f3e8b144c7451f
 ^
 .src/main/webapp/WEB-INF/views/logIn/Kostl.html,b\8\b87558b25841852985eb3aafad3bb1e9c310b296
-b
-2src/main/webapp/WEB-INF/views/merch/merchEdit.html,d\f\df990b15b9d7cf017431f0dfc2b30547f5839e7c
 \
 ,src/main/java/org/example/dao/PersonDAO.java,4\5\45304d02707fde544ab6339d8788fbe7b0afe45b
-b
-2src/main/webapp/WEB-INF/views/merch/merchShow.html,c\8\c852ae851089ba64108d8db15759d9cdd47d0783
-b
-2src/main/java/org/example/repository/TestRepo.java,5\4\54f7376650fa55b8627a13e5ecd222924cc6b129
-d
-4src/main/java/org/example/repository/TestEntity.java,5\9\59e202435ef42844460c3a86f902ed36769dc7fa
