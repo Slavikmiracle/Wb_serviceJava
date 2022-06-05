@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../static/css/merchEdit.css">
+    <title>Векторшоп</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/MengIntf/merch/{id}(id=${merch.getId()})}" th:object="${merch}">
+    <h1 th:text="${merch.getName()}">value</h1>
+    <label  for="name"  th:text="${merch.getName()} + ' текущее название ' ">Enter name: </label>
+    <input class="label" placeholder="Введите новое название" type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="value" th:text="${merch.getValue()} + ' текущее количество  ' ">Enter quantity: </label>
+    <input class="label" placeholder="Введите количество" type="text" th:field="*{value}" id="value"/>
+    <br/>
+    <label for="type" placeholder="Введите новый тип" th:text="${merch.getTypes()} + ' текущий тип  ' ">Enter type: </label>
+    <select class="label1" th:field="*{types}" id="type"/>
+    <option th:value="Обычная" th:text="Обычная">Пункт 1</option>
+    <option th:value="Специальная" th:text="Специальная">Пункт 2</option>
+    </select>
+    <br/>
+    <label for="institute"  th:text="${merch.getInstitute()} + '  текущий институт  ' ">Enter institute: </label>
+    <input class="label"  placeholder="Введите институт" type="text" th:field="*{institute}" id="institute"/>
+    <br/>
+    <label for="description"  th:text="${merch.getDescription()} + '  текущее описание  ' ">Enter description: </label>
+    <input class="label" placeholder="Введите новое описание" type="text" th:field="*{description}" id="description"/>
+    <br/>
+    <input class="label1" type="submit" value="Изменить!"/>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:text-decoration="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../static/css/merchEdit.css">
+    <title>Векторшоп</title>
+</head>
+<body>
+<h1>Добавление новых сувениров</h1>
+<form th:method="Post" th:action="@{/MengIntf/MerchAll}" th:object="${merch}">
+    <label for="name">Введите название: </label>
+    <input class="label" type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="value">Введите количество: </label>
+    <input class="label" type="text" th:field="*{value}" id="value"/>
+    <br/>
+    <label for="type">Введите тип: </label>
+    <select class="label1" th:field="*{types}" id="type"/>
+    <option th:value="Common" th:text="Common">Пункт 1</option>
+    <option th:value="Target" th:text="Target">Пункт 2</option>
+    </select>
+    <br/>
+    <label for="institute">Введите институт: </label>
+    <input class="label" type="text" th:field="*{institute}" id="institute"/>
+    <br/>
+    <label for="description">Введите описание: </label>
+    <input class="label" type="text" th:field="*{description}" id="description"/>
+    <br/>
+    <input class="label1" type="submit" value="Добавить!"/>
+
+</form>
+<br><hr>
+<a href="/MengIntf/MerchAll"> Вернуться к сувенирам</a>
+</body>
+</html>

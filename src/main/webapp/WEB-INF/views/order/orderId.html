@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../static/css/merchEdit.css">
+    <title>Векторшоп</title>
+</head>
+<body>
+<a href="/MengIntf">Вернуться к заказам</a>
+<br>
+<hr>
+<form th:method="PATCH" th:action="@{/MengIntf/{id}(id=${order.getId()})}" th:object="${order}">
+    <div >
+            <a th:text="${order.getThings() + ', ' + order.getUserName()+ order.getReady()}">user</a>
+            <select th:field="*{ready}"  id="ready"/>
+            <option th:value="Впроцессе" th:text="Выполняется">Пункт 3</option>
+            <option th:value="Невозможно" th:text="Невозможно">Пункт 4</option>
+            <option th:value="Готово" th:text="Готово">Пункт 2</option>
+
+            </select>
+
+        </div>
+        <input type="submit" value="Update!"/>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../../static/css/merchEdit.css">
+  <title>Вектор</title>
+</head>
+<body>
+<a class="title" href="/UserIntf/MerchAll"> Перейти к сувенирам</a>
+<br>
+<hr>
+<h2>Заказы </h2>
+<div  th:each="order:${orderAll}">
+  <a  th:href="@{/MengIntf/{id}(id=${order.getId()})}"
+      th:text="${order.getThings() +  ', состояние - ' +order.getReady()}">user</a>
+</div>
+</body>
+</html>

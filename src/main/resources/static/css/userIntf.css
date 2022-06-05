@@ -1,0 +1,76 @@
+body{
+    background-color: #6e82b8;
+}
+.div1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 40px;
+    font-size: 15px;
+    color: black;
+    width: 165px;
+    transform: translateY(-50%);
+    text-align:center;
+    display:inline-block;}
+
+
+.div2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 40px;
+    font-size: 15px;
+    color: black;
+    width: 130px;
+    text-align:center;
+    display:inline-block;}
+.text{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    width: 500px;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 9px 7px 9px 7px;
+    font-size: 17px;
+}
+
+.merch{
+    padding: 5px;
+    border: 10px solid #000;
+    background: #A9A9A9;
+    height: 500px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.merch::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+h1,h2{
+    text-align:center;
+    font-family: Consolas;
+}
+
+.label{
+    height: 120px;
+    margin-top: 20px;
+    width: 1000px;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+
+}
+.label1{
+    text-align: center;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: 7px solid rgb(25 15 94);
+    margin-top: 20px;
+    margin-left: 400px;
+    background-color: #b2d4e3;
+    margin-bottom: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

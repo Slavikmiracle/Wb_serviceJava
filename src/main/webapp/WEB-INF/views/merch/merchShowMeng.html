@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/show.css">
+    <title>Вектор</title>
+</head>
+<body>
+<span class="window"><p class="name" th:text="${merch.getName()}">VALUE</p></span>
+<br/>
+<hr/>
+<p class="text" th:text="${'Кол-во ' + merch.getValue()}">VALUE</p>
+<p class="text" th:text="${'Тип: ' + merch.getTypes()}">VALUE</p>
+<p class="text" th:text="${'Институт: ' + merch.getInstitute()}">VALUE</p>
+<p class="text3" th:text="${'Описание: ' + merch.getDescription()}">VALUE<p>
+    <br><hr>
+<h3> <a class="text" href="/UserIntf">Вернуться ко всем сувенирам</a></h3>
+<br/>
+<hr/>
+<a class="text" th:href="@{/MengIntf/merch/{id}/edit(id=${merch.getId()})}">Изменить</a>
+<br/>
+<hr/>
+<form th:method="DELETE" th:action="@{/MengIntf/merch/{id}(id=${merch.getId()})}">
+    <input class="label" type="submit" value="Удалить"/>
+</form>
+
+</body>
+</html>

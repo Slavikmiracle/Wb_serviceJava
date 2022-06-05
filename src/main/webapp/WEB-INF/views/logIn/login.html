@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="static/css/index.css" rel="stylesheet" type="text/css"  >
+    <title>Авторизация пользователя</title>
+</head>
+<body>
+<div class="Title">ВЕКТОР-SHOP</div>
+
+<div class="how">
+    <img class="pngV" src="static/img/Vector.png" alt="sad">
+</div >
+
+<div class="Log">
+<form th:method="POST" th:action="@{/authorization}" th:object="${user}">
+    <div class="label"><label for="login"> </label>
+    <input class="label" type="text" th:field="*{login}" id="login" placeholder="Логин"/>
+    </div>
+    <div class="label"> <label for="password"> </label>
+    <input class="label" type="password" th:field="*{password}" id="password" placeholder="Пароль"/>
+    <div class="label">
+    <input class="Button" type="submit" value="Войти"/>
+    </div>
+</div>
+</form>
+
+</div >
+<ul>
+    <li class="text"><i>Пользователь</i>
+<p class="text">Логин пользователя : <b>Bunina</b></p>
+<p class="text">Пароль пользователя: <b>123</b></p>
+</li>
+<li class="text"><i>Менеджер</i>
+    <p class="text">Логин менеджера : <b>Stich</b></p>
+    <p class="text">Пароль менеджера : <b>234</b></p>
+    </li>
+</ul>
+</body>
+</html>

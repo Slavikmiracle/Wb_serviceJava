@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:text-decoration="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/userIntf.css">
+    <title>Векторшоп</title>
+</head>
+<body  link="#000000">
+<h1 >Добро пожаловать в Вектор-SHOP! </h1>
+<div class="div1">
+    <a href="/MengIntf/MerchAll"><img src="../static/img/stich.png" width="100"
+                             height="100" alt="Пример">  </a> </div>
+<div class="div1">
+    <a href="/IIT"><img src="../static/img/IIT colour.png" width="100"
+                        height="75" alt="Пример">  </a></div>
+<div class="div1">
+    <a href="/IRI"><img src="../static/img/RTS colour.png" width="100"
+                        height="75" alt="Пример"> </a>
+</div>
+<div class="div1">
+    <a href="/IKB"><img src="../static/img/KBSP colour.png" width="100"
+                        height="75" alt="Пример"></a>
+</div>
+<div class="div1">
+    <a href="/III"><img src="../static/img/Kib colour.png" width="100"
+                        height="75" alt="Пример"></a>
+
+</div>
+<div class="div1">
+    <a href="/ITXT"><img src="../static/img/ITHT colour.png" width="100"
+                         height="75" alt="Пример"></a>
+
+</div>
+<div class="div1">
+    <a href="/IPTIP"><img src="../static/img/FTI colour.png" width="100"
+                          height="75" alt="Пример"> </a>
+</div>
+<div class="div1">
+    <a href="/ITU"><img src="../static/img/ITU colour.png" width="100"
+                        height="75" alt="Пример"> </a>
+
+</div>
+<div class="div2">
+    <a href="/General"><img src="../static/img/MIREA_Gerb_Colour.png" width="109" height="120.5" alt="Пример"></a>
+
+</div>
+
+<br/>
+<hr/>
+<h2 >Подходящая сувенирная продукция</h2>
+<div class="merch">
+    <div  th:each="merch:${merchAll}">
+        <a  text-decoration: none th:href="@{/MengIntf/merch/{id}(id=${merch.getId()})}"
+            th:text="${merch.getName() + ', ' + merch.getValue()+' institut - '+ merch.getInstitute()}">user</a>
+    </div>
+</div>
+<br/>
+<hr/>
+<a href="/MengIntf/MerchAll/new">Добавить сувенирную продукцию</a>
+</body>
+</html>

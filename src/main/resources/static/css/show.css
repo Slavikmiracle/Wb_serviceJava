@@ -1,0 +1,35 @@
+body{
+    background-color: #6f78ad;
+    font-family: 'Times New Roman', Times, serif;
+}
+.name{
+    margin: 20px 10px 10px 15px;
+    font-size: 40px;
+}
+.text{
+    color: black;
+    text-decoration: none;
+    margin: 30px 10px 10px 15px;
+    font-size: 25px;
+}
+.text3{
+    margin: 30px 10px 10px 15px;
+    font-size: 25px;
+    width: 600px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 9px 7px 9px 7px;
+    font-size: 17px;
+}
+.label{
+    height: 30px;
+    margin-top: 20px;
+    width: 150px;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+
+}

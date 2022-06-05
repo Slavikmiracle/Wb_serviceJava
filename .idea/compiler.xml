@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Wb_serviceJava" />
+        <module name="ReallyLastChance" />
       </profile>
     </annotationProcessing>
   </component>
