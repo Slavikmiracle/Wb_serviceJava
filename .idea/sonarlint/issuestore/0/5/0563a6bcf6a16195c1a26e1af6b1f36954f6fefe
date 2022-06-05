@@ -1,0 +1,10 @@
+
+o	java:S116"TRename this field "Institute" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÿ¾8ÚŸ”¯“0
+N
+java:S1128"1Remove this unused import 'javax.persistence.Id'.(þ¹ÞÜ8œ‰“¯“0
+Z
+java:S1128"=Remove this unused import 'javax.validation.constraints.Min'.(ã¤Ž½8œ‰“¯“0
+^
+java:S1128"BRemove this unused import 'javax.validation.constraints.NotEmpty'.(ÿÿör8ßŸ”¯“0
+[
+java:S1128">Remove this unused import 'javax.validation.constraints.Size'.(›«´Ý8ßŸ”¯“0

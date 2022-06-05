@@ -1,14 +1,20 @@
 package org.example.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -16,12 +22,12 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 import javax.sql.DataSource;
-@PropertySource("classpath:adress.properties")
+import java.util.Properties;
+
+@PropertySource("classpath:address.properties")
 @Configuration
 @ComponentScan("org.example")
 @EnableWebMvc
-//@EnableJpaRepositories("org.example.repository")
-//@EntityScan(basePackages = "org.example.entity")
 public class SpringConfig implements WebMvcConfigurer {
     @Autowired
     private Environment env;
@@ -60,19 +66,28 @@ public class SpringConfig implements WebMvcConfigurer {
         registry.viewResolver(resolver);
     }
 
+    @Configuration
+    public class MvcConfig implements WebMvcConfigurer {
+        @Override
+        public void addResourceHandlers(ResourceHandlerRegistry registry) {
+            registry.addResourceHandler("/static/**")
+                    .addResourceLocations("classpath:/static/");
+        }
+    }
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        dataSource.setDriverClassName(env.getProperty("adress.driver_class"));
-        dataSource.setUrl(env.getProperty("adress.connection_url"));
-        dataSource.setUsername(env.getProperty("adress.connection_username"));
-        dataSource.setPassword(env.getProperty("adress.connection_password"));
+        dataSource.setDriverClassName(env.getProperty("address.driver_class"));
+        dataSource.setUrl(env.getProperty("address.connection_url"));
+        dataSource.setUsername(env.getProperty("address.connection_username"));
+        dataSource.setPassword(env.getProperty("address.connection_password"));
 
         return dataSource;
     }
+
     @Bean
-    @Scope("prototype")
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }

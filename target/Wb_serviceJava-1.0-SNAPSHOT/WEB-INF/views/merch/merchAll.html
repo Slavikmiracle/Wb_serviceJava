@@ -63,7 +63,6 @@
 
   <form th:method="Post" th:action="@{/user/order/new}" th:object="${order}">
     <textarea class="label" type="text" th:field="*{things}" id="things" placeholder="Введите подходящие элементы"></textarea>
-    <div style="color:red; margin-top: 20px" th:if="${#fields.hasErrors('things')}" th:errors="*{things}">Name Error</div>
     <br/>
     <input  class="label1" type="submit" value="Заказать"/>
 

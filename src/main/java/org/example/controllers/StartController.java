@@ -43,11 +43,6 @@ public class StartController {
     }
 
 
-    @GetMapping("/user/order")
-    public String newMerch(@ModelAttribute("order") Order order) {
-
-        return "order/orderCreate";
-    }
 
     @PostMapping("/user/order/new")
     public String createOrder(@ModelAttribute("order") @Valid Order order,
@@ -78,7 +73,7 @@ public class StartController {
 
     @GetMapping("/UserIntf/order")
     public String UserOrder(Model model) {
-        model.addAttribute("orderAll", orderDAO.index());
+        model.addAttribute("orderAll", orderDAO.search(userLogin));
         return "/order/orderUser";
     }
 
