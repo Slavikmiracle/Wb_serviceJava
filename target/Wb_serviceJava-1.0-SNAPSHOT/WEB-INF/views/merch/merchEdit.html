@@ -2,28 +2,32 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Merch Edit</title>
+    <link rel="stylesheet" href="../../../static/css/merchEdit.css">
+    <title>Векторшоп</title>
 </head>
 <body>
 
-<form th:method="PATCH" th:action="@{/2/{id}(id=${merch.getId()})}" th:object="${merch}">
-    <label for="name">Enter name: </label>
-    <input type="text" th:field="*{name}" id="name"/>
-    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+<form th:method="PATCH" th:action="@{/MengIntf/merch/{id}(id=${merch.getId()})}" th:object="${merch}">
+    <h1 th:text="${merch.getName()}">value</h1>
+    <label  for="name"  th:text="${merch.getName()} + ' текущее название ' ">Enter name: </label>
+    <input class="label" placeholder="Введите новое название" type="text" th:field="*{name}" id="name"/>
     <br/>
-    <label for="value">Enter age: </label>
-    <input type="text" th:field="*{value}" id="value"/>
-    <div style="color:red" th:if="${#fields.hasErrors('value')}" th:errors="*{value}">Age Error</div>
+    <label for="value" th:text="${merch.getValue()} + ' текущее количество  ' ">Enter quantity: </label>
+    <input class="label" placeholder="Введите количество" type="text" th:field="*{value}" id="value"/>
     <br/>
-    <label for="type">Enter email: </label>
-    <input type="text" th:field="*{types}" id="type"/>
-    <div style="color:red" th:if="${#fields.hasErrors('types')}" th:errors="*{types}">Email Error</div>
+    <label for="type" placeholder="Введите новый тип" th:text="${merch.getTypes()} + ' текущий тип  ' ">Enter type: </label>
+    <select class="label1" th:field="*{types}" id="type"/>
+    <option th:value="Обычная" th:text="Обычная">Пункт 1</option>
+    <option th:value="Специальная" th:text="Специальная">Пункт 2</option>
+    </select>
     <br/>
-    <label for="value">Enter age: </label>
-    <input type="text" th:field="*{institute}" id="institute"/>
-    <div style="color:red" th:if="${#fields.hasErrors('institute')}" th:errors="*{institute}">Age Error</div>
+    <label for="institute"  th:text="${merch.getInstitute()} + '  текущий институт  ' ">Enter institute: </label>
+    <input class="label"  placeholder="Введите институт" type="text" th:field="*{institute}" id="institute"/>
     <br/>
-    <input type="submit" value="Update!"/>
+    <label for="description"  th:text="${merch.getDescription()} + '  текущее описание  ' ">Enter description: </label>
+    <input class="label" placeholder="Введите новое описание" type="text" th:field="*{description}" id="description"/>
+    <br/>
+    <input class="label1" type="submit" value="Изменить!"/>
 
 </form>
 

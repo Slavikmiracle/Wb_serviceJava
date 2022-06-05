@@ -1,21 +1,7 @@
 
-f
-6src/main/webapp/WEB-INF/views/logIn/authorization.html,f\d\fd09c69e6106a2a55aaf89eb7ddef1b0f37929db
-Z
-*src/main/java/org/example/models/User.java,c\3\c3bf03d3f3212c24e8590b09499a0ef2958aba56
-\
-,src/main/java/org/example/models/Person.java,a\1\a11f040e33cbfd083e8d6b20f5a6505fdf0c67e2
-^
-.src/main/webapp/WEB-INF/views/logIn/stich.html,9\7\9709fcfc41a3da905db7b6dd4fc08d65b65d058b
-_
-/src/main/webapp/WEB-INF/views/logIn/bunina.html,1\1\1196aece948ba01e4273f8aff1816cb4a7fcc8fd
 ^
 .src/main/webapp/WEB-INF/views/people/edit.html,6\5\65684609741f2fbbbec8a75635079c03817e4212
 X
 (src/main/webapp/WEB-INF/views/index.html,0\a\0aed5dd3c6ebbaaa505963ae5e56d6ff6d4a9158
 ]
 -src/main/webapp/WEB-INF/views/people/new.html,9\7\97c3b486fa9c121f92d9aff1f5f3e8b144c7451f
-^
-.src/main/webapp/WEB-INF/views/logIn/Kostl.html,b\8\b87558b25841852985eb3aafad3bb1e9c310b296
-\
-,src/main/java/org/example/dao/PersonDAO.java,4\5\45304d02707fde544ab6339d8788fbe7b0afe45b

@@ -2,23 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Show</title>
+  <link rel="stylesheet" href="../static/css/show.css">
+  <title>Вектор</title>
 </head>
 <body>
-<p th:text="${merch.getName() + ', ' + merch.getValue()}">VALUE</p>
-<p th:text="${'Type: ' + merch.getTypes()}">VALUE</p>
-<p th:text="${'Institute: ' + merch.getInstitute()}">VALUE</p>
-<p th:text="${merch.getId()}">VALUE</p>
-<p>WTF?</p>
-
+<span class="window"><p class="name" th:text="${merch.getName()}">VALUE</p></span>
 <br/>
 <hr/>
-<a th:href="@{/2/{id}/edit(id=${merch.getId()})}">Edit</a>
-<br/>
-<hr/>
-<form th:method="DELETE" th:action="@{/2/{id}(id=${merch.getId()})}">
-  <input type="submit" value="Delete"/>
-</form>
+<p class="text" th:text="${'Кол-во ' + merch.getValue()}">VALUE</p>
+<p class="text" th:text="${'Тип: ' + merch.getTypes()}">VALUE</p>
+<p class="text" th:text="${'Институт: ' + merch.getInstitute()}">VALUE</p>
+<p class="text3" th:text="${'Описание: ' + merch.getDescription()}">VALUE<p>
+<br><hr>
+  <h3> <a class="text" href="/UserIntf">Вернуться ко всем сувенирам</a></h3>
 
+  </div>
 </body>
 </html>

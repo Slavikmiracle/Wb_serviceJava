@@ -6,21 +6,20 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class Merch {
-    @NotEmpty(message = "Id should not be empty")
     private int id;
-
-    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
-    @NotEmpty(message = "Name should not be empty")
     private String name;
-
-    @NotEmpty(message = "Value should not be empty")
     private int value;
-
-    @NotEmpty(message = "Type should not be empty")
     private String types;
-
-    @NotEmpty(message = "Institute should not be empty")
     private String Institute;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public void setId(int id) {
         this.id = id;

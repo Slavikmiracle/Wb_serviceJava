@@ -1,13 +1,11 @@
 package org.example.dao;
 
-import org.example.models.Person;
 import org.example.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 @Component
 public class UserDAO {
@@ -22,17 +20,4 @@ public class UserDAO {
         return jdbcTemplate.query("SELECT * FROM Users", new BeanPropertyRowMapper<>(User.class));
     }
 
- /*   public void save(Person person) {
-        jdbcTemplate.update("INSERT INTO Person VALUES(1, ?, ?, ?)", person.getName(), person.getAge(),
-                person.getEmail());
-    }
-
-    public void update(int id, Person updatedPerson) {
-        jdbcTemplate.update("UPDATE Person SET name=?, age=?, email=? WHERE id=?", updatedPerson.getName(),
-                updatedPerson.getAge(), updatedPerson.getEmail(), id);
-    }
-
-    public void delete(int id) {
-        jdbcTemplate.update("DELETE FROM Person WHERE id=?", id);
-    }*/
 }
