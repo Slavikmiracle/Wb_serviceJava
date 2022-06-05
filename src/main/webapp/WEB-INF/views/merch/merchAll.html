@@ -6,15 +6,18 @@
 </head>
 <body>
 
+<br/>
+<hr/>
+
 <div th:each="merch:${merchAll}">
-  <a th:href="@{/merch/merchAll/{id}(id=${merch.getId()})}"
-     th:text="${merch.getName() + ', ' + merch.getValue()+' intitut - '+ merch.getInstitute}">user</a>
+  <a th:href="@{/2/{id}(id=${merch.getId()})}"
+     th:text="${merch.getName() + ', ' + merch.getValue()+' institut - '+ merch.getInstitute()}">user</a>
 </div>
 
 <br/>
 <hr/>
 
-<a href="/people/new">Create new person</a>
+<a href="/merch/search">Clarify the request</a>
 
 </body>
 </html>
